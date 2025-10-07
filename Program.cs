@@ -89,7 +89,7 @@ void gameRules()
     Console.WriteLine("1. Easy (10 attempts)");
     Console.WriteLine("2. Medium (5 attempts)");
     Console.WriteLine("3. Hard (3 attempts)\n");
-    Console.WriteLine("You can go to application start by typing 'start' instead of a number.");
+    Console.WriteLine("You can restart the game by typing 'restart' instead of a number.");
     Console.WriteLine("You can exit the application any time by typing 'exit' instead of a number\n");
     Console.WriteLine("First, Choose the difficulty level by entering 1, 2 or 3.");
 }
@@ -100,7 +100,7 @@ void gameRulesReminder()
     Console.WriteLine("Computer will Choose a Random number between 1 to 100.");
     Console.WriteLine("You have only limited chances to guess.");
     Console.WriteLine("You have to guess the number in minimum attempts to win.");
-    Console.WriteLine("You can go to application start by typing 'start'. ");
+    Console.WriteLine("You can restart the game by typing 'restart' instead of a number. ");
     Console.WriteLine("You Can exit the game anytime by entering 'exit' instead of a number.\n");
 }
 
@@ -141,7 +141,7 @@ void gameLogic(int attempts,string difficulty)
             } 
             // logic for application game reset
         }
-        else if (userInput.ToLower() == "start")
+        else if (userInput.ToLower() == "restart")
         {
 
             Console.WriteLine("Are you sure you want to reset the game ? Y/N");
