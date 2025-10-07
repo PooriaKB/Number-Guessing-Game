@@ -9,11 +9,33 @@ while (running)
     
     try
     {
-        var level = Convert.ToInt16(Console.ReadLine());
+        var level = Console.ReadLine();
         string difficulty;
         int attempts;
+        if(level == "exit")
+        {
+            Console.WriteLine("Are you sure you want to exit? Y/N");
+            var confirmExit = Console.ReadLine().ToLower();
+            
+            if(confirmExit == "y")
+            {
+                running = false;
+                break;
+            }
+            else if (confirmExit == "n")
+            {
+                resetApp();
+                continue;
+            }
+            else
+            {
+                Console.WriteLine("Invalid input try again.");
+                resetApp();
+                continue;
+            }
+        }
 
-        switch (level)
+        switch (Convert.ToInt32(level))
         {
             case 1:
                 attempts = 10;
@@ -68,7 +90,7 @@ void gameRules()
     Console.WriteLine("2. Medium (5 attempts)");
     Console.WriteLine("3. Hard (3 attempts)\n");
     Console.WriteLine("You can go to application start by typing 'start' instead of a number.");
-    Console.WriteLine("You can exit the application any time by typing 'exit' instead of a number");
+    Console.WriteLine("You can exit the application any time by typing 'exit' instead of a number\n");
     Console.WriteLine("First, Choose the difficulty level by entering 1, 2 or 3.");
 }
 
