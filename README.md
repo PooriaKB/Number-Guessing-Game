@@ -36,7 +36,7 @@ When you launch the app, you’ll first see the **game rules** displayed on the 
 
 - You **must** enter a valid number between **1–100** when guessing.  
 - If you enter an invalid input (like a letter or symbol), the app will show **“Invalid input”** and prompt you again.  
-- When typing **start** or **exit**, the app will ask for confirmation (`y/n`) before taking action.
+- When typing **restart** or **exit**, the app will ask for confirmation (`y/n`) before taking action.
 
 ---
 
